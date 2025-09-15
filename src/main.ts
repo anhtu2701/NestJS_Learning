@@ -32,7 +32,7 @@ async function bootstrap() {
     saveUninitialized: false,
     cookie: { maxAge: ms(configService.get<string>('EXPRESS_SESSION_COOKIE')) },
     store: MongoStore.create({
-      mongoUrl: configService.get<string>('MONGODB_URI'),
+      mongoUrl: configService.get<string>('MONGODB_URL'),
     })
   }));
 
